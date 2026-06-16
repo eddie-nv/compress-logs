@@ -8,7 +8,11 @@
 
 ## The Demo
 
-Sample logs → **toggle** → two paths side-by-side:
+```
+python demo.py ssh_brute_force.log
+```
+
+Prints a side-by-side comparison, then runs the crew on the compressed path:
 
 | | RAW path | COMPRESSED path |
 |---|---|---|
@@ -18,7 +22,13 @@ Sample logs → **toggle** → two paths side-by-side:
 | Latency | ~18s | ~2s |
 | Agent answer quality | Same or better (less noise) |
 
-The toggle is a Streamlit UI. Both paths run the same 3-agent CrewAI crew. The difference is what context string the crew receives.
+**No Streamlit.** The toggle is a CLI flag (`--mode raw|compressed|both`), not a web UI. Both paths run the same 3-agent CrewAI crew — only the input string changes.
+
+**Why not Streamlit:** it's 3 widgets + a second process to run alongside uvicorn. A CLI script delivers the same comparison with zero extra dependencies and nothing to break during a demo.
+
+**Why not TrueFoundry for the toggle:** TF is a deployment/MLOps platform (AI Gateway, tracing, service hosting) — it has no built-in A/B comparison UI. The toggle stays in the CLI.
+
+**Why batch, not stream:** the value prop is a before/after comparison (total cost, final quality). Streaming would require two concurrent streams with coordinated timing — extra complexity with no demo benefit. Batch: crew runs, result prints, numbers speak for themselves.
 
 ---
 
@@ -32,11 +42,11 @@ sample_logs/
 
             │
             ▼
-[Streamlit toggle]
+    demo.py --mode both      # CLI script, no Streamlit
             │
     ┌───────┴────────┐
-    │ RAW            │ COMPRESSED
-    │                │
+    │ RAW (skip)     │ COMPRESSED
+    │ print stats    │
     │                ▼
     │        FastAPI /v1/compress
     │        (drain3 Python, deployed on TrueFoundry)
@@ -44,7 +54,7 @@ sample_logs/
     │        → emits [xN] template [slot summaries]
     │
     └───────┬────────┘
-            │
+            │ (batch — no streaming)
             ▼
     CrewAI Crew (3 agents, all routed via TrueFoundry AI Gateway)
     ├── Triage Agent      → gpt-4o-mini  (cheap, fast)
@@ -101,7 +111,7 @@ compress-logs/
 │   └── crew.py               # CrewAI 3-agent crew, TrueFoundry LLMs
 │
 ├── demo/
-│   └── app.py                # Streamlit toggle UI
+│   └── demo.py               # CLI script: prints stats + runs crew (replaces Streamlit)
 │
 ├── deploy/
 │   └── truefoundry.yaml      # TF service + AI Gateway config
@@ -177,5 +187,6 @@ Reference: `reference/docs/PUBLIC_BENCHMARKS.md`
 - Live log ingestion from real providers (Vercel, K8s, AWS) — samples only
 - Template cache warm/pre-population (codag's moat, not needed for demo)
 - Auth, multi-tenancy, billing
-- Streaming (batch is fine for demo)
+- Streaming — batch is the right call; the demo value is a before/after comparison, not a live typewriter
+- Streamlit UI — replaced by a CLI script; saves a process, saves a dependency, same story
 - The Rust codag-drain service (using Python drain3 instead, same algorithm)
