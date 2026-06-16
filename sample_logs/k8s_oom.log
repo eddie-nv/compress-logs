@@ -1,0 +1,171 @@
+2024-01-15T09:00:01.123Z INFO  kubelet node=worker-1: pulling image payments-service:v2.4.1
+2024-01-15T09:00:03.456Z INFO  kubelet node=worker-1: successfully pulled image payments-service:v2.4.1
+2024-01-15T09:00:03.789Z INFO  kubelet node=worker-1: created container payments-service
+2024-01-15T09:00:04.012Z INFO  kubelet node=worker-1: started container payments-service
+2024-01-15T09:00:04.234Z INFO  payments-service pod=payments-7d9f8b-xq2k1: server starting port=8080
+2024-01-15T09:00:04.567Z INFO  payments-service pod=payments-7d9f8b-xq2k1: connected to postgres host=db.internal port=5432
+2024-01-15T09:00:04.890Z INFO  payments-service pod=payments-7d9f8b-xq2k1: ready to serve requests
+2024-01-15T09:00:10.123Z INFO  kubelet node=worker-2: pulling image orders-service:v1.8.3
+2024-01-15T09:00:12.456Z INFO  kubelet node=worker-2: successfully pulled image orders-service:v1.8.3
+2024-01-15T09:00:12.789Z INFO  kubelet node=worker-2: created container orders-service
+2024-01-15T09:00:13.012Z INFO  kubelet node=worker-2: started container orders-service
+2024-01-15T09:00:13.234Z INFO  orders-service pod=orders-5c8d9b-pn7m3: server starting port=8081
+2024-01-15T09:00:13.567Z INFO  orders-service pod=orders-5c8d9b-pn7m3: connected to postgres host=db.internal port=5432
+2024-01-15T09:00:13.890Z INFO  orders-service pod=orders-5c8d9b-pn7m3: ready to serve requests
+2024-01-15T09:00:20.123Z INFO  kubelet node=worker-3: pulling image inventory-service:v3.1.0
+2024-01-15T09:00:22.456Z INFO  kubelet node=worker-3: successfully pulled image inventory-service:v3.1.0
+2024-01-15T09:00:22.789Z INFO  kubelet node=worker-3: created container inventory-service
+2024-01-15T09:00:23.012Z INFO  kubelet node=worker-3: started container inventory-service
+2024-01-15T09:00:23.234Z INFO  inventory-service pod=inventory-8f7c6a-rt4p9: server starting port=8082
+2024-01-15T09:00:23.567Z INFO  inventory-service pod=inventory-8f7c6a-rt4p9: connected to postgres host=db.internal port=5432
+2024-01-15T09:00:23.890Z INFO  inventory-service pod=inventory-8f7c6a-rt4p9: ready to serve requests
+2024-01-15T09:15:01.234Z INFO  payments-service pod=payments-7d9f8b-xq2k1: processed payment amount=125.00 txn_id=txn_891234
+2024-01-15T09:15:02.567Z INFO  payments-service pod=payments-7d9f8b-xq2k1: processed payment amount=89.99 txn_id=txn_891235
+2024-01-15T09:15:03.890Z INFO  payments-service pod=payments-7d9f8b-xq2k1: processed payment amount=342.50 txn_id=txn_891236
+2024-01-15T09:30:01.123Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 412Mi limit=512Mi
+2024-01-15T09:30:05.456Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 435Mi limit=512Mi
+2024-01-15T09:30:10.789Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 461Mi limit=512Mi
+2024-01-15T09:30:15.012Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 478Mi limit=512Mi
+2024-01-15T09:30:20.234Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 490Mi limit=512Mi
+2024-01-15T09:30:25.567Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 501Mi limit=512Mi
+2024-01-15T09:30:30.890Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 508Mi limit=512Mi
+2024-01-15T09:30:35.123Z ERROR kubelet node=worker-1: OOMKilled container=payments-service pod=payments-7d9f8b-xq2k1 namespace=production limit=512Mi
+2024-01-15T09:30:35.456Z INFO  kubelet node=worker-1: container payments-service in pod payments-7d9f8b-xq2k1 terminated reason=OOMKilled exit_code=137
+2024-01-15T09:30:36.789Z INFO  kubelet node=worker-1: restarting container payments-service pod=payments-7d9f8b-xq2k1 restart_count=1
+2024-01-15T09:30:37.012Z INFO  kubelet node=worker-1: pulling image payments-service:v2.4.1
+2024-01-15T09:30:38.234Z INFO  kubelet node=worker-1: successfully pulled image payments-service:v2.4.1
+2024-01-15T09:30:38.567Z INFO  kubelet node=worker-1: started container payments-service
+2024-01-15T09:30:38.890Z INFO  payments-service pod=payments-7d9f8b-xq2k1: server starting port=8080
+2024-01-15T09:30:39.123Z INFO  payments-service pod=payments-7d9f8b-xq2k1: connected to postgres host=db.internal port=5432
+2024-01-15T09:30:39.456Z INFO  payments-service pod=payments-7d9f8b-xq2k1: ready to serve requests
+2024-01-15T09:45:01.789Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 398Mi limit=512Mi
+2024-01-15T09:45:06.012Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 421Mi limit=512Mi
+2024-01-15T09:45:11.234Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 447Mi limit=512Mi
+2024-01-15T09:45:16.567Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 469Mi limit=512Mi
+2024-01-15T09:45:21.890Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 483Mi limit=512Mi
+2024-01-15T09:45:27.123Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 496Mi limit=512Mi
+2024-01-15T09:45:32.456Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 505Mi limit=512Mi
+2024-01-15T09:45:37.789Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 510Mi limit=512Mi
+2024-01-15T09:45:42.012Z ERROR kubelet node=worker-1: OOMKilled container=payments-service pod=payments-7d9f8b-xq2k1 namespace=production limit=512Mi
+2024-01-15T09:45:42.234Z INFO  kubelet node=worker-1: container payments-service in pod payments-7d9f8b-xq2k1 terminated reason=OOMKilled exit_code=137
+2024-01-15T09:45:43.567Z INFO  kubelet node=worker-1: restarting container payments-service pod=payments-7d9f8b-xq2k1 restart_count=2
+2024-01-15T09:45:43.890Z INFO  kubelet node=worker-1: pulling image payments-service:v2.4.1
+2024-01-15T09:45:45.123Z INFO  kubelet node=worker-1: successfully pulled image payments-service:v2.4.1
+2024-01-15T09:45:45.456Z INFO  kubelet node=worker-1: started container payments-service
+2024-01-15T09:45:45.789Z INFO  payments-service pod=payments-7d9f8b-xq2k1: server starting port=8080
+2024-01-15T09:45:46.012Z INFO  payments-service pod=payments-7d9f8b-xq2k1: connected to postgres host=db.internal port=5432
+2024-01-15T09:45:46.234Z INFO  payments-service pod=payments-7d9f8b-xq2k1: ready to serve requests
+2024-01-15T10:00:01.567Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 401Mi limit=512Mi
+2024-01-15T10:00:06.890Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 428Mi limit=512Mi
+2024-01-15T10:00:12.123Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 452Mi limit=512Mi
+2024-01-15T10:00:17.456Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 475Mi limit=512Mi
+2024-01-15T10:00:22.789Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 491Mi limit=512Mi
+2024-01-15T10:00:28.012Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 503Mi limit=512Mi
+2024-01-15T10:00:33.234Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 509Mi limit=512Mi
+2024-01-15T10:00:38.567Z ERROR kubelet node=worker-1: OOMKilled container=payments-service pod=payments-7d9f8b-xq2k1 namespace=production limit=512Mi
+2024-01-15T10:00:38.890Z INFO  kubelet node=worker-1: container payments-service in pod payments-7d9f8b-xq2k1 terminated reason=OOMKilled exit_code=137
+2024-01-15T10:00:40.123Z INFO  kubelet node=worker-1: restarting container payments-service pod=payments-7d9f8b-xq2k1 restart_count=3
+2024-01-15T10:00:40.456Z INFO  kubelet node=worker-1: pulling image payments-service:v2.4.1
+2024-01-15T10:00:41.789Z INFO  kubelet node=worker-1: successfully pulled image payments-service:v2.4.1
+2024-01-15T10:00:42.012Z INFO  kubelet node=worker-1: started container payments-service
+2024-01-15T10:00:42.234Z INFO  payments-service pod=payments-7d9f8b-xq2k1: server starting port=8080
+2024-01-15T10:00:42.567Z INFO  payments-service pod=payments-7d9f8b-xq2k1: connected to postgres host=db.internal port=5432
+2024-01-15T10:00:42.890Z INFO  payments-service pod=payments-7d9f8b-xq2k1: ready to serve requests
+2024-01-15T10:15:01.123Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 388Mi limit=512Mi
+2024-01-15T10:15:06.456Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 415Mi limit=512Mi
+2024-01-15T10:15:11.789Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 441Mi limit=512Mi
+2024-01-15T10:15:17.012Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 462Mi limit=512Mi
+2024-01-15T10:15:22.234Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 479Mi limit=512Mi
+2024-01-15T10:15:27.567Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 494Mi limit=512Mi
+2024-01-15T10:15:32.890Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 506Mi limit=512Mi
+2024-01-15T10:15:38.123Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 511Mi limit=512Mi
+2024-01-15T10:15:43.456Z ERROR kubelet node=worker-1: OOMKilled container=payments-service pod=payments-7d9f8b-xq2k1 namespace=production limit=512Mi
+2024-01-15T10:15:43.789Z INFO  kubelet node=worker-1: container payments-service in pod payments-7d9f8b-xq2k1 terminated reason=OOMKilled exit_code=137
+2024-01-15T10:15:45.012Z WARN  kube-controller: pod payments-7d9f8b-xq2k1 has restarted 4 times in last 30m namespace=production
+2024-01-15T10:15:45.234Z INFO  kubelet node=worker-1: restarting container payments-service pod=payments-7d9f8b-xq2k1 restart_count=4
+2024-01-15T10:15:45.567Z INFO  kubelet node=worker-1: pulling image payments-service:v2.4.1
+2024-01-15T10:15:46.890Z INFO  kubelet node=worker-1: successfully pulled image payments-service:v2.4.1
+2024-01-15T10:15:47.123Z INFO  kubelet node=worker-1: started container payments-service
+2024-01-15T10:15:47.456Z INFO  payments-service pod=payments-7d9f8b-xq2k1: server starting port=8080
+2024-01-15T10:15:47.789Z INFO  payments-service pod=payments-7d9f8b-xq2k1: connected to postgres host=db.internal port=5432
+2024-01-15T10:15:48.012Z INFO  payments-service pod=payments-7d9f8b-xq2k1: ready to serve requests
+2024-01-15T10:30:01.234Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 376Mi limit=512Mi
+2024-01-15T10:30:06.567Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 403Mi limit=512Mi
+2024-01-15T10:30:11.890Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 429Mi limit=512Mi
+2024-01-15T10:30:17.123Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 455Mi limit=512Mi
+2024-01-15T10:30:22.456Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 473Mi limit=512Mi
+2024-01-15T10:30:27.789Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 487Mi limit=512Mi
+2024-01-15T10:30:33.012Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 499Mi limit=512Mi
+2024-01-15T10:30:38.234Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 507Mi limit=512Mi
+2024-01-15T10:30:43.567Z ERROR kubelet node=worker-1: OOMKilled container=payments-service pod=payments-7d9f8b-xq2k1 namespace=production limit=512Mi
+2024-01-15T10:30:43.890Z INFO  kubelet node=worker-1: container payments-service in pod payments-7d9f8b-xq2k1 terminated reason=OOMKilled exit_code=137
+2024-01-15T10:30:45.123Z WARN  kube-controller: pod payments-7d9f8b-xq2k1 has restarted 5 times in last 60m namespace=production
+2024-01-15T10:30:45.456Z WARN  kube-controller: CrashLoopBackOff pod=payments-7d9f8b-xq2k1 namespace=production back_off=5m
+2024-01-15T10:30:45.789Z INFO  kubelet node=worker-1: restarting container payments-service pod=payments-7d9f8b-xq2k1 restart_count=5
+2024-01-15T10:30:46.012Z INFO  kubelet node=worker-1: pulling image payments-service:v2.4.1
+2024-01-15T10:30:47.234Z INFO  kubelet node=worker-1: successfully pulled image payments-service:v2.4.1
+2024-01-15T10:30:47.567Z INFO  kubelet node=worker-1: started container payments-service
+2024-01-15T10:30:47.890Z INFO  payments-service pod=payments-7d9f8b-xq2k1: server starting port=8080
+2024-01-15T10:30:48.123Z INFO  payments-service pod=payments-7d9f8b-xq2k1: connected to postgres host=db.internal port=5432
+2024-01-15T10:30:48.456Z INFO  payments-service pod=payments-7d9f8b-xq2k1: ready to serve requests
+2024-01-15T10:45:01.789Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 391Mi limit=512Mi
+2024-01-15T10:45:07.012Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 418Mi limit=512Mi
+2024-01-15T10:45:12.234Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 444Mi limit=512Mi
+2024-01-15T10:45:17.567Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 467Mi limit=512Mi
+2024-01-15T10:45:22.890Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 482Mi limit=512Mi
+2024-01-15T10:45:28.123Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 498Mi limit=512Mi
+2024-01-15T10:45:33.456Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 508Mi limit=512Mi
+2024-01-15T10:45:38.789Z ERROR kubelet node=worker-1: OOMKilled container=payments-service pod=payments-7d9f8b-xq2k1 namespace=production limit=512Mi
+2024-01-15T10:45:39.012Z INFO  kubelet node=worker-1: container payments-service in pod payments-7d9f8b-xq2k1 terminated reason=OOMKilled exit_code=137
+2024-01-15T10:45:40.234Z WARN  kube-controller: CrashLoopBackOff pod=payments-7d9f8b-xq2k1 namespace=production back_off=10m
+2024-01-15T10:45:40.567Z INFO  kubelet node=worker-1: restarting container payments-service pod=payments-7d9f8b-xq2k1 restart_count=6
+2024-01-15T10:45:40.890Z INFO  kubelet node=worker-1: pulling image payments-service:v2.4.1
+2024-01-15T10:45:42.123Z INFO  kubelet node=worker-1: successfully pulled image payments-service:v2.4.1
+2024-01-15T10:45:42.456Z INFO  kubelet node=worker-1: started container payments-service
+2024-01-15T10:45:42.789Z INFO  payments-service pod=payments-7d9f8b-xq2k1: server starting port=8080
+2024-01-15T10:45:43.012Z INFO  payments-service pod=payments-7d9f8b-xq2k1: connected to postgres host=db.internal port=5432
+2024-01-15T10:45:43.234Z INFO  payments-service pod=payments-7d9f8b-xq2k1: ready to serve requests
+2024-01-15T10:50:01.567Z INFO  orders-service pod=orders-5c8d9b-pn7m3: processed order_id=ord_5510 amount=199.99
+2024-01-15T10:50:02.890Z INFO  inventory-service pod=inventory-8f7c6a-rt4p9: stock check sku=PROD-4421 qty=142
+2024-01-15T10:50:03.123Z WARN  orders-service pod=orders-5c8d9b-pn7m3: payment service unavailable for order_id=ord_5511 retrying
+2024-01-15T10:50:03.456Z WARN  orders-service pod=orders-5c8d9b-pn7m3: payment service unavailable for order_id=ord_5512 retrying
+2024-01-15T10:50:03.789Z WARN  orders-service pod=orders-5c8d9b-pn7m3: payment service unavailable for order_id=ord_5513 retrying
+2024-01-15T10:50:04.012Z ERROR orders-service pod=orders-5c8d9b-pn7m3: payment service circuit-breaker OPEN consecutive_failures=5
+2024-01-15T10:50:04.234Z INFO  alert-manager: firing alert=ServiceDown service=payments-service namespace=production restarts=6
+2024-01-15T11:00:01.567Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 382Mi limit=512Mi
+2024-01-15T11:00:06.890Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 408Mi limit=512Mi
+2024-01-15T11:00:12.123Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 434Mi limit=512Mi
+2024-01-15T11:00:17.456Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 459Mi limit=512Mi
+2024-01-15T11:00:22.789Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 476Mi limit=512Mi
+2024-01-15T11:00:28.012Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 492Mi limit=512Mi
+2024-01-15T11:00:33.234Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 504Mi limit=512Mi
+2024-01-15T11:00:38.567Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 510Mi limit=512Mi
+2024-01-15T11:00:43.890Z ERROR kubelet node=worker-1: OOMKilled container=payments-service pod=payments-7d9f8b-xq2k1 namespace=production limit=512Mi
+2024-01-15T11:00:44.123Z INFO  kubelet node=worker-1: container payments-service in pod payments-7d9f8b-xq2k1 terminated reason=OOMKilled exit_code=137
+2024-01-15T11:00:45.456Z WARN  kube-controller: CrashLoopBackOff pod=payments-7d9f8b-xq2k1 namespace=production back_off=20m
+2024-01-15T11:00:45.789Z INFO  kubelet node=worker-1: restarting container payments-service pod=payments-7d9f8b-xq2k1 restart_count=7
+2024-01-15T11:00:46.012Z INFO  kubelet node=worker-1: pulling image payments-service:v2.4.1
+2024-01-15T11:00:47.234Z INFO  kubelet node=worker-1: successfully pulled image payments-service:v2.4.1
+2024-01-15T11:00:47.567Z INFO  kubelet node=worker-1: started container payments-service
+2024-01-15T11:00:47.890Z INFO  payments-service pod=payments-7d9f8b-xq2k1: server starting port=8080
+2024-01-15T11:00:48.123Z INFO  payments-service pod=payments-7d9f8b-xq2k1: connected to postgres host=db.internal port=5432
+2024-01-15T11:00:48.456Z INFO  payments-service pod=payments-7d9f8b-xq2k1: ready to serve requests
+2024-01-15T11:15:01.789Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 373Mi limit=512Mi
+2024-01-15T11:15:07.012Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 400Mi limit=512Mi
+2024-01-15T11:15:12.234Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 426Mi limit=512Mi
+2024-01-15T11:15:17.567Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 451Mi limit=512Mi
+2024-01-15T11:15:22.890Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 470Mi limit=512Mi
+2024-01-15T11:15:28.123Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 486Mi limit=512Mi
+2024-01-15T11:15:33.456Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 497Mi limit=512Mi
+2024-01-15T11:15:38.789Z WARN  payments-service pod=payments-7d9f8b-xq2k1: memory usage 506Mi limit=512Mi
+2024-01-15T11:15:44.012Z ERROR kubelet node=worker-1: OOMKilled container=payments-service pod=payments-7d9f8b-xq2k1 namespace=production limit=512Mi
+2024-01-15T11:15:44.234Z INFO  kubelet node=worker-1: container payments-service in pod payments-7d9f8b-xq2k1 terminated reason=OOMKilled exit_code=137
+2024-01-15T11:15:45.567Z WARN  kube-controller: CrashLoopBackOff pod=payments-7d9f8b-xq2k1 namespace=production back_off=40m
+2024-01-15T11:15:45.890Z INFO  alert-manager: firing alert=CrashLoopBackOff pod=payments-7d9f8b-xq2k1 namespace=production restarts=8
+2024-01-15T11:15:46.123Z INFO  kubelet node=worker-1: restarting container payments-service pod=payments-7d9f8b-xq2k1 restart_count=8
+2024-01-15T11:15:46.456Z INFO  kubelet node=worker-1: pulling image payments-service:v2.4.1
+2024-01-15T11:15:47.789Z INFO  kubelet node=worker-1: successfully pulled image payments-service:v2.4.1
+2024-01-15T11:15:48.012Z INFO  kubelet node=worker-1: started container payments-service
+2024-01-15T11:15:48.234Z INFO  payments-service pod=payments-7d9f8b-xq2k1: server starting port=8080
+2024-01-15T11:15:48.567Z INFO  payments-service pod=payments-7d9f8b-xq2k1: connected to postgres host=db.internal port=5432
+2024-01-15T11:15:48.890Z INFO  payments-service pod=payments-7d9f8b-xq2k1: ready to serve requests

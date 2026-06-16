@@ -1,0 +1,214 @@
+2024-01-15T14:00:01.234Z INFO  api-gateway: GET /api/v1/users 200 45ms upstream=user-service
+2024-01-15T14:00:01.891Z INFO  api-gateway: GET /api/v1/products 200 32ms upstream=product-service
+2024-01-15T14:00:02.112Z INFO  api-gateway: POST /api/v1/orders 200 67ms upstream=order-service
+2024-01-15T14:00:02.445Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:02.891Z WARN  api-gateway: GET /api/v1/users 504 timeout=5002ms upstream=user-service retries=3
+2024-01-15T14:00:03.234Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:03.678Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5003ms upstream=order-service retries=3
+2024-01-15T14:00:04.012Z WARN  api-gateway: GET /api/v1/products 504 timeout=5001ms upstream=product-service retries=3
+2024-01-15T14:00:04.334Z WARN  api-gateway: GET /api/v1/users 504 timeout=5004ms upstream=user-service retries=3
+2024-01-15T14:00:04.789Z WARN  api-gateway: GET /api/v1/users 504 timeout=5002ms upstream=user-service retries=3
+2024-01-15T14:00:05.123Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5001ms upstream=order-service retries=3
+2024-01-15T14:00:05.456Z WARN  api-gateway: GET /api/v1/users 504 timeout=5003ms upstream=user-service retries=3
+2024-01-15T14:00:05.890Z WARN  api-gateway: GET /api/v1/products 504 timeout=5002ms upstream=product-service retries=3
+2024-01-15T14:00:06.234Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:06.567Z ERROR db-pool: connection pool exhausted max_connections=50 active=50 queued=14
+2024-01-15T14:00:06.890Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5004ms upstream=order-service retries=3
+2024-01-15T14:00:07.123Z WARN  api-gateway: GET /api/v1/users 504 timeout=5002ms upstream=user-service retries=3
+2024-01-15T14:00:07.456Z ERROR db-pool: connection pool exhausted max_connections=50 active=50 queued=18
+2024-01-15T14:00:07.789Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:08.012Z WARN  api-gateway: GET /api/v1/products 504 timeout=5003ms upstream=product-service retries=3
+2024-01-15T14:00:08.345Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5002ms upstream=order-service retries=3
+2024-01-15T14:00:08.678Z ERROR db-pool: connection pool exhausted max_connections=50 active=50 queued=22
+2024-01-15T14:00:09.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:09.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5004ms upstream=user-service retries=3
+2024-01-15T14:00:09.678Z WARN  api-gateway: GET /api/v1/products 504 timeout=5001ms upstream=product-service retries=3
+2024-01-15T14:00:10.012Z ERROR db-pool: connection pool exhausted max_connections=50 active=50 queued=27
+2024-01-15T14:00:10.345Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5003ms upstream=order-service retries=3
+2024-01-15T14:00:10.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5002ms upstream=user-service retries=3
+2024-01-15T14:00:11.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:11.345Z ERROR db-pool: connection pool exhausted max_connections=50 active=50 queued=31
+2024-01-15T14:00:11.678Z WARN  api-gateway: GET /api/v1/products 504 timeout=5004ms upstream=product-service retries=3
+2024-01-15T14:00:12.012Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5001ms upstream=order-service retries=3
+2024-01-15T14:00:12.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5002ms upstream=user-service retries=3
+2024-01-15T14:00:12.678Z ERROR db-pool: connection pool exhausted max_connections=50 active=50 queued=35
+2024-01-15T14:00:13.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5003ms upstream=user-service retries=3
+2024-01-15T14:00:13.345Z WARN  api-gateway: GET /api/v1/products 504 timeout=5001ms upstream=product-service retries=3
+2024-01-15T14:00:13.678Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5002ms upstream=order-service retries=3
+2024-01-15T14:00:14.012Z ERROR db-pool: connection pool exhausted max_connections=50 active=50 queued=38
+2024-01-15T14:00:14.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5004ms upstream=user-service retries=3
+2024-01-15T14:00:14.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:15.012Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:15.345Z WARN  api-gateway: GET /api/v1/products 504 timeout=5003ms upstream=product-service retries=3
+2024-01-15T14:00:15.678Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5001ms upstream=order-service retries=3
+2024-01-15T14:00:16.012Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:16.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5002ms upstream=user-service retries=3
+2024-01-15T14:00:16.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5004ms upstream=user-service retries=3
+2024-01-15T14:00:17.012Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:17.345Z WARN  api-gateway: GET /api/v1/products 504 timeout=5001ms upstream=product-service retries=3
+2024-01-15T14:00:17.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5003ms upstream=user-service retries=3
+2024-01-15T14:00:18.012Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5002ms upstream=order-service retries=3
+2024-01-15T14:00:18.345Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:18.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:19.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5004ms upstream=user-service retries=3
+2024-01-15T14:00:19.345Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:19.678Z WARN  api-gateway: GET /api/v1/products 504 timeout=5002ms upstream=product-service retries=3
+2024-01-15T14:00:20.012Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5001ms upstream=order-service retries=3
+2024-01-15T14:00:20.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5003ms upstream=user-service retries=3
+2024-01-15T14:00:20.678Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:21.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:21.345Z WARN  api-gateway: GET /api/v1/products 504 timeout=5004ms upstream=product-service retries=3
+2024-01-15T14:00:21.678Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5002ms upstream=order-service retries=3
+2024-01-15T14:00:22.012Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:22.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:22.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5003ms upstream=user-service retries=3
+2024-01-15T14:00:23.012Z WARN  api-gateway: GET /api/v1/products 504 timeout=5001ms upstream=product-service retries=3
+2024-01-15T14:00:23.345Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:23.678Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5004ms upstream=order-service retries=3
+2024-01-15T14:00:24.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5002ms upstream=user-service retries=3
+2024-01-15T14:00:24.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:24.678Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:25.012Z WARN  api-gateway: GET /api/v1/products 504 timeout=5003ms upstream=product-service retries=3
+2024-01-15T14:00:25.345Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5001ms upstream=order-service retries=3
+2024-01-15T14:00:25.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5002ms upstream=user-service retries=3
+2024-01-15T14:00:26.012Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:26.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5004ms upstream=user-service retries=3
+2024-01-15T14:00:26.678Z WARN  api-gateway: GET /api/v1/products 504 timeout=5001ms upstream=product-service retries=3
+2024-01-15T14:00:27.012Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5003ms upstream=order-service retries=3
+2024-01-15T14:00:27.345Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:27.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5002ms upstream=user-service retries=3
+2024-01-15T14:00:28.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:28.345Z WARN  api-gateway: GET /api/v1/products 504 timeout=5004ms upstream=product-service retries=3
+2024-01-15T14:00:28.678Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:29.012Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5001ms upstream=order-service retries=3
+2024-01-15T14:00:29.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5003ms upstream=user-service retries=3
+2024-01-15T14:00:29.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5002ms upstream=user-service retries=3
+2024-01-15T14:00:30.012Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:30.345Z WARN  api-gateway: GET /api/v1/products 504 timeout=5001ms upstream=product-service retries=3
+2024-01-15T14:00:30.678Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5004ms upstream=order-service retries=3
+2024-01-15T14:00:31.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:31.345Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:31.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5003ms upstream=user-service retries=3
+2024-01-15T14:00:32.012Z WARN  api-gateway: GET /api/v1/products 504 timeout=5002ms upstream=product-service retries=3
+2024-01-15T14:00:32.345Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5001ms upstream=order-service retries=3
+2024-01-15T14:00:32.678Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:33.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5004ms upstream=user-service retries=3
+2024-01-15T14:00:33.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:33.678Z WARN  api-gateway: GET /api/v1/products 504 timeout=5003ms upstream=product-service retries=3
+2024-01-15T14:00:34.012Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:34.345Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5002ms upstream=order-service retries=3
+2024-01-15T14:00:34.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:35.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5004ms upstream=user-service retries=3
+2024-01-15T14:00:35.345Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:35.678Z WARN  api-gateway: GET /api/v1/products 504 timeout=5001ms upstream=product-service retries=3
+2024-01-15T14:00:36.012Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5003ms upstream=order-service retries=3
+2024-01-15T14:00:36.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5002ms upstream=user-service retries=3
+2024-01-15T14:00:36.678Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:37.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:37.345Z WARN  api-gateway: GET /api/v1/products 504 timeout=5004ms upstream=product-service retries=3
+2024-01-15T14:00:37.678Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5001ms upstream=order-service retries=3
+2024-01-15T14:00:38.012Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:38.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5003ms upstream=user-service retries=3
+2024-01-15T14:00:38.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5002ms upstream=user-service retries=3
+2024-01-15T14:00:39.012Z WARN  api-gateway: GET /api/v1/products 504 timeout=5001ms upstream=product-service retries=3
+2024-01-15T14:00:39.345Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:39.678Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5004ms upstream=order-service retries=3
+2024-01-15T14:00:40.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:40.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5003ms upstream=user-service retries=3
+2024-01-15T14:00:40.678Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:41.012Z WARN  api-gateway: GET /api/v1/products 504 timeout=5002ms upstream=product-service retries=3
+2024-01-15T14:00:41.345Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5001ms upstream=order-service retries=3
+2024-01-15T14:00:41.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5004ms upstream=user-service retries=3
+2024-01-15T14:00:42.012Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:42.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:42.678Z WARN  api-gateway: GET /api/v1/products 504 timeout=5003ms upstream=product-service retries=3
+2024-01-15T14:00:43.012Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5002ms upstream=order-service retries=3
+2024-01-15T14:00:43.345Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:43.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:44.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5004ms upstream=user-service retries=3
+2024-01-15T14:00:44.345Z WARN  api-gateway: GET /api/v1/products 504 timeout=5001ms upstream=product-service retries=3
+2024-01-15T14:00:44.678Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:45.012Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5003ms upstream=order-service retries=3
+2024-01-15T14:00:45.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5002ms upstream=user-service retries=3
+2024-01-15T14:00:45.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:46.012Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:46.345Z WARN  api-gateway: GET /api/v1/products 504 timeout=5004ms upstream=product-service retries=3
+2024-01-15T14:00:46.678Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5001ms upstream=order-service retries=3
+2024-01-15T14:00:47.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5003ms upstream=user-service retries=3
+2024-01-15T14:00:47.345Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:47.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5002ms upstream=user-service retries=3
+2024-01-15T14:00:48.012Z WARN  api-gateway: GET /api/v1/products 504 timeout=5001ms upstream=product-service retries=3
+2024-01-15T14:00:48.345Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5004ms upstream=order-service retries=3
+2024-01-15T14:00:48.678Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:49.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:49.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5003ms upstream=user-service retries=3
+2024-01-15T14:00:49.678Z WARN  api-gateway: GET /api/v1/products 504 timeout=5002ms upstream=product-service retries=3
+2024-01-15T14:00:50.012Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:50.345Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5001ms upstream=order-service retries=3
+2024-01-15T14:00:50.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5004ms upstream=user-service retries=3
+2024-01-15T14:00:51.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:51.345Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:51.678Z WARN  api-gateway: GET /api/v1/products 504 timeout=5003ms upstream=product-service retries=3
+2024-01-15T14:00:52.012Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5002ms upstream=order-service retries=3
+2024-01-15T14:00:52.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:52.678Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:53.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5004ms upstream=user-service retries=3
+2024-01-15T14:00:53.345Z WARN  api-gateway: GET /api/v1/products 504 timeout=5001ms upstream=product-service retries=3
+2024-01-15T14:00:53.678Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5003ms upstream=order-service retries=3
+2024-01-15T14:00:54.012Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:54.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5002ms upstream=user-service retries=3
+2024-01-15T14:00:54.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:55.012Z WARN  api-gateway: GET /api/v1/products 504 timeout=5004ms upstream=product-service retries=3
+2024-01-15T14:00:55.345Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:55.678Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5001ms upstream=order-service retries=3
+2024-01-15T14:00:56.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5003ms upstream=user-service retries=3
+2024-01-15T14:00:56.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5002ms upstream=user-service retries=3
+2024-01-15T14:00:56.678Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:57.012Z WARN  api-gateway: GET /api/v1/products 504 timeout=5001ms upstream=product-service retries=3
+2024-01-15T14:00:57.345Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5004ms upstream=order-service retries=3
+2024-01-15T14:00:57.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:00:58.012Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:58.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5003ms upstream=user-service retries=3
+2024-01-15T14:00:58.678Z WARN  api-gateway: GET /api/v1/products 504 timeout=5002ms upstream=product-service retries=3
+2024-01-15T14:00:59.012Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5001ms upstream=order-service retries=3
+2024-01-15T14:00:59.345Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:00:59.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5004ms upstream=user-service retries=3
+2024-01-15T14:01:00.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:01:00.345Z WARN  api-gateway: GET /api/v1/products 504 timeout=5003ms upstream=product-service retries=3
+2024-01-15T14:01:00.678Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:01:01.012Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5002ms upstream=order-service retries=3
+2024-01-15T14:01:01.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:01:01.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5004ms upstream=user-service retries=3
+2024-01-15T14:01:02.012Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:01:02.345Z WARN  api-gateway: GET /api/v1/products 504 timeout=5001ms upstream=product-service retries=3
+2024-01-15T14:01:02.678Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5003ms upstream=order-service retries=3
+2024-01-15T14:01:03.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5002ms upstream=user-service retries=3
+2024-01-15T14:01:03.345Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:01:03.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:01:04.012Z WARN  api-gateway: GET /api/v1/products 504 timeout=5004ms upstream=product-service retries=3
+2024-01-15T14:01:04.345Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5001ms upstream=order-service retries=3
+2024-01-15T14:01:04.678Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:01:05.012Z INFO  alert-manager: firing alert=HighErrorRate service=api-gateway error_rate=98.7% threshold=5%
+2024-01-15T14:01:05.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5003ms upstream=user-service retries=3
+2024-01-15T14:01:05.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5002ms upstream=user-service retries=3
+2024-01-15T14:01:06.012Z WARN  api-gateway: GET /api/v1/products 504 timeout=5001ms upstream=product-service retries=3
+2024-01-15T14:01:06.345Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:01:06.678Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5004ms upstream=order-service retries=3
+2024-01-15T14:01:07.012Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:01:07.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5003ms upstream=user-service retries=3
+2024-01-15T14:01:07.678Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:01:08.012Z WARN  api-gateway: GET /api/v1/products 504 timeout=5002ms upstream=product-service retries=3
+2024-01-15T14:01:08.345Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5001ms upstream=order-service retries=3
+2024-01-15T14:01:08.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5004ms upstream=user-service retries=3
+2024-01-15T14:01:09.012Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:01:09.345Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:01:09.678Z WARN  api-gateway: GET /api/v1/products 504 timeout=5003ms upstream=product-service retries=3
+2024-01-15T14:01:10.012Z WARN  api-gateway: POST /api/v1/orders 504 timeout=5002ms upstream=order-service retries=3
+2024-01-15T14:01:10.345Z ERROR db-pool: connection wait timeout after 30000ms max_connections=50 active=50
+2024-01-15T14:01:10.678Z WARN  api-gateway: GET /api/v1/users 504 timeout=5001ms upstream=user-service retries=3
+2024-01-15T14:01:11.012Z INFO  api-gateway: GET /api/v1/users 200 38ms upstream=user-service
+2024-01-15T14:01:11.345Z INFO  api-gateway: GET /api/v1/users 200 41ms upstream=user-service
+2024-01-15T14:01:11.678Z INFO  db-pool: connections released active=12 idle=38
+2024-01-15T14:01:12.012Z INFO  api-gateway: POST /api/v1/orders 200 55ms upstream=order-service
+2024-01-15T14:01:12.345Z INFO  api-gateway: GET /api/v1/products 200 29ms upstream=product-service
+2024-01-15T14:01:12.678Z INFO  api-gateway: GET /api/v1/users 200 43ms upstream=user-service

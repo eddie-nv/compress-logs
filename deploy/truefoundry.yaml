@@ -1,0 +1,35 @@
+# TrueFoundry service definition for the compression microservice.
+# Deploy via: tfy deploy --file deploy/truefoundry.yaml
+#
+# Prerequisites:
+#   pip install truefoundry
+#   tfy login
+
+name: log-compress-api
+type: service
+
+image:
+  type: build
+  build_source:
+    type: local
+  build_spec:
+    type: dockerfile
+    dockerfile_path: deploy/Dockerfile
+
+ports:
+  - port: 8000
+    protocol: TCP
+    expose: true
+    app_protocol: http
+
+replicas: 1
+
+resources:
+  cpu_request: 0.25
+  cpu_limit: 1.0
+  memory_request: 512
+  memory_limit: 1024
+
+env:
+  # No secrets needed — compression is deterministic, no LLM calls.
+  LOG_LEVEL: info
