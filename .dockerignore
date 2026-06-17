@@ -1,0 +1,15 @@
+.venv*/
+__pycache__/
+*.pyc
+*.pyo
+.env
+.coverage
+.pytest_cache/
+agents/
+benchmarks/
+demo.py
+ref-repos/
+sample_logs/
+tests/
+.claude/
+.git/
