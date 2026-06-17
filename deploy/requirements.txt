@@ -1,0 +1,4 @@
+drain3>=0.9.11
+fastapi>=0.111.0
+uvicorn>=0.29.0
+tiktoken>=0.7.0

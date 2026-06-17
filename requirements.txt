@@ -1,3 +1,4 @@
+# Full local dev requirements. Docker image uses deploy/requirements.txt (compression-only subset).
 crewai>=0.80.0
 drain3>=0.9.11
 fastapi>=0.111.0
