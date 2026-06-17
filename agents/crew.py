@@ -1,37 +1,58 @@
 import os
-from crewai import Agent, Task, Crew, LLM
-from traceloop.sdk import Traceloop
+
 from dotenv import load_dotenv
 
 load_dotenv()
 
-Traceloop.init(
-    api_endpoint=os.environ["TFY_TRACING_ENDPOINT"],
-    headers={
-        "Authorization": f"Bearer {os.environ['TFY_API_KEY']}",
-        "TFY-Tracing-Project": os.environ.get("TFY_TRACING_PROJECT", "compress-logs-demo"),
-    },
-)
+_traceloop_initialized = False
 
-GATEWAY = os.environ["TFY_GATEWAY_URL"]
-KEY = os.environ["TFY_API_KEY"]
 
-# Cheap model for triage, capable model for deeper reasoning.
-# Swap model strings to Virtual Model names once configured in TrueFoundry:
-#   "openai/logdiag/triage" and "openai/logdiag/analysis"
-triage_llm = LLM(
-    model=os.environ.get("TRIAGE_MODEL", "openai/openai-main/gpt-4o-mini"),
-    base_url=GATEWAY,
-    api_key=KEY,
-)
-analysis_llm = LLM(
-    model=os.environ.get("ANALYSIS_MODEL", "openai/openai-main/gpt-4o"),
-    base_url=GATEWAY,
-    api_key=KEY,
-)
+def _init_traceloop() -> None:
+    global _traceloop_initialized
+    if _traceloop_initialized:
+        return
+    endpoint = os.environ.get("TFY_TRACING_ENDPOINT")
+    api_key = os.environ.get("TFY_API_KEY")
+    if not endpoint or not api_key:
+        return
+    from traceloop.sdk import Traceloop
+
+    Traceloop.init(
+        api_endpoint=endpoint,
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "TFY-Tracing-Project": os.environ.get(
+                "TFY_TRACING_PROJECT", "compress-logs-demo"
+            ),
+        },
+    )
+    _traceloop_initialized = True
 
 
 def run_crew(log_context: str) -> dict:
+    from crewai import Agent, Crew, LLM, Task
+
+    gateway = os.environ.get("TFY_GATEWAY_URL")
+    api_key = os.environ.get("TFY_API_KEY")
+    if not gateway or not api_key:
+        raise RuntimeError(
+            "TFY_GATEWAY_URL and TFY_API_KEY must be set. "
+            "Copy .env.example to .env and fill in your values."
+        )
+
+    _init_traceloop()
+
+    triage_llm = LLM(
+        model=os.environ.get("TRIAGE_MODEL", "openai/openai-main/gpt-4o-mini"),
+        base_url=gateway,
+        api_key=api_key,
+    )
+    analysis_llm = LLM(
+        model=os.environ.get("ANALYSIS_MODEL", "openai/openai-main/gpt-4o"),
+        base_url=gateway,
+        api_key=api_key,
+    )
+
     triage = Agent(
         role="Log Triage Specialist",
         goal="Quickly assess the severity and affected service from log output.",
@@ -75,13 +96,19 @@ def run_crew(log_context: str) -> dict:
         expected_output="Severity level, affected service name, and 2-sentence error summary.",
     )
     t2 = Task(
-        description="Based on the triage, identify the single most likely root cause in 2-3 sentences.",
+        description=(
+            "Based on the triage, identify the single most likely root cause "
+            "in 2-3 sentences."
+        ),
         agent=root_cause,
         expected_output="Root cause in 2-3 sentences.",
         context=[t1],
     )
     t3 = Task(
-        description="Given the root cause, provide 3-5 numbered remediation steps to resolve and prevent recurrence.",
+        description=(
+            "Given the root cause, provide 3-5 numbered remediation steps "
+            "to resolve and prevent recurrence."
+        ),
         agent=remediation,
         expected_output="Numbered list of 3-5 remediation steps.",
         context=[t2],
