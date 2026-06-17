@@ -25,5 +25,8 @@ htmlcov/
 # External reference repos (not our code)
 ref-repos/
 
+# Benchmark data (downloaded, not checked in)
+benchmarks/loghub/
+
 # OS
 .DS_Store

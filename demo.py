@@ -102,7 +102,9 @@ def main() -> None:
         reduction = data["reduction_pct"]
 
     if args.mode == "both":
-        assert comp_tokens is not None
+        if comp_tokens is None:
+            print("Error: compression failed", file=sys.stderr)
+            sys.exit(1)
         raw_cost = estimate_cost(raw_tokens)
         comp_cost = estimate_cost(comp_tokens)
         savings_pct = round((raw_cost - comp_cost) / raw_cost * 100)
@@ -124,7 +126,9 @@ def main() -> None:
     else:
         context = raw_text
 
-    assert context is not None
+    if context is None:
+        print("Error: no context to send to agents", file=sys.stderr)
+        sys.exit(1)
     tokens_sent = len(enc.encode(context))
     print(f"Running crew on {args.mode} path  ·  {tokens_sent:,} tokens  ·  est. ${estimate_cost(tokens_sent):.4f}\n")
 
